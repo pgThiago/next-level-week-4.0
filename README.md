@@ -1,5 +1,5 @@
 <div align="center">
-    <a style="font-size:40px" href="https://rocketseat.com.br/">Rocketseat</a>
+    <a style="font-size:70px" href="https://rocketseat.com.br/">Rocketseat</a>
 </div>
 
 <div align="center">
