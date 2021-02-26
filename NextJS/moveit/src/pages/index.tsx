@@ -4,6 +4,9 @@ import { ExperienceBar } from '../components/ExperienceBar'
 import { Profile } from '../components/Profile'
 import { CompletedChallenges } from '../components/CompletedChallenges'
 import { CountDown } from '../components/CountDown'
+import { ChallengeBox } from '../components/ChallengeBox'
+
+import { CountDownProvider } from '../context/CountDownContext'
 
 import styles from '../styles/pages/Home.module.css'
 
@@ -14,14 +17,19 @@ export default function Home() {
 				<title>Início | Move it</title>
 			</Head>
 			<ExperienceBar />
-			<section>
-				<div>
-					<Profile />
-					<CompletedChallenges />
-					<CountDown />
-				</div>
-				<div></div>
-			</section>
+			<CountDownProvider>
+				<section>
+					<div>
+						<Profile />
+						<CompletedChallenges />
+						<CountDown />
+					</div>
+
+					<div>
+						<ChallengeBox />
+					</div>
+				</section>
+			</CountDownProvider>
 		</div>
 	)
 }
