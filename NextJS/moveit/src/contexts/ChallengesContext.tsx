@@ -66,7 +66,7 @@ export function ChallengeProvider({ children, ...rest }: ChallengeProviderProps)
 
 		setActiveChallenge(challenge)
 
-		new Audio('/notification.mp3').play()
+		// new Audio('/notification.mp3').play()
 
 		if (Notification.permission === 'granted')
 			new Notification('Novo desafio 🎉', {
