@@ -66,13 +66,12 @@ export function ChallengeProvider({ children, ...rest }: ChallengeProviderProps)
 
 		setActiveChallenge(challenge)
 
-		// new Audio('/notification.mp3').play()
+		new Audio('/notification.mp3').play()
 
-		if (Notification.permission === 'granted') {
-			console.log('startNewChallenge')
-			// new Notification('Novo desafio 🎉', {
-			// 	body: `Valendo ${challenge.amount}xp`
-			// })
+		if (Notification.permission === 'granted' && screen.width >= 720) {
+			new Notification('Novo desafio 🎉', {
+				body: `Valendo ${challenge.amount}xp`
+			})
 		}
 	}
 
