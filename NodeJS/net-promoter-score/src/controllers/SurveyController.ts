@@ -2,8 +2,7 @@ import { Request, Response } from 'express'
 import { getCustomRepository } from 'typeorm'
 import { SurveysRepository } from "../repositories/SurveysRepository"
 
-class SurveyController {
-
+export class SurveyController {
 	async show(request: Request, response: Response) {
 		const surveysRepository = getCustomRepository(SurveysRepository)
 		const all = await surveysRepository.find()
@@ -20,5 +19,3 @@ class SurveyController {
 		return response.status(201).json(survey)
 	}
 }
-
-export { SurveyController }

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { CountDownContext } from '../context/CountDownContext'
+import { CountDownContext } from '../contexts/CountDownContext'
 import styles from '../styles/components/CountDown.module.css'
 
 export function CountDown() {
